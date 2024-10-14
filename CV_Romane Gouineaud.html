@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae Interactivo</title>
+    <style>
+        /* Styles généraux */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            background-color: #F4C2C2; /* Rose pâle */
+            color: #333;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            border-bottom: 4px solid #F4C2C2;
+        }
+        header .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border: 2px solid #F4C2C2; /* Bordure du cadre */
+            border-radius: 15px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 0 auto;
+        }
+        header h1 {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+        header p {
+            margin: 5px 0;
+        }
+
+        /* Styles pour la photo */
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff;
+            margin-bottom: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Style pour les sections */
+        section {
+            padding: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        section h2 {
+            margin: 0;
+            color: #F4C2C2; /* Rose pâle */
+            cursor: pointer;
+            padding-bottom: 10px;
+        }
+        section h2:hover {
+            text-decoration: underline;
+        }
+        .content {
+            display: none;
+            padding-top: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #ccc;
+        }
+        ul li:last-child {
+            border-bottom: none;
+        }
+
+        /* Bouton Toggle */
+        button {
+            background-color: #F4C2C2; /* Rose pâle */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #e5a1a1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header avec grand cadre pour le nom et la photo -->
+        <header>
+            <div class="profile-container">
+                <img src="./photo_CV.jpg" alt="Foto de perfil" class="profile-photo">
+                <h1>Romane Gouineaud</h1>
+                <p> 4º año de Ingeniería en Informática </p><p> INSA Lyon </p>
+                <p>Correo: romane.gouineaud@insa-lyon.fr</p>
+                <p>Tel: +33 768383155</p>
+
+            </div>
+        </header>
+
+        <!-- Projets -->
+        <section>
+            <h2 onclick="toggleSection(this)">Proyectos Realizados</h2>
+            <div class="content">
+                <ul>
+                    <li><strong>Proyecto 1 :</strong> Determinación del espesor óptimo del lubricante y cálculo de la fricción en un cojinete pivotante.</li>
+                    <li><strong>Proyecto 2 :</strong> Creación de un sitio web (JavaScript, HTML, CSS) </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Travaux -->
+        <section>
+            <h2 onclick="toggleSection(this)">Experiencia Laboral</h2>
+            <div class="content">
+                <ul>
+                    <li><strong>Finanzas Públicas :</strong> Agente de recepción - Verano 2023</li>
+                    <li><strong>Liebherr Aerospace Toulouse :</strong> Agente de logística (Prácticas) - Verano 2022 </li>
+                    <li><strong>Super U :</strong> Cajera - Verano 2021</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Études -->
+        <section>
+            <h2 onclick="toggleSection(this)">Formación Académica</h2>
+            <div class="content">
+                <ul>
+                    <li><strong>Instituto Nacional de Ciencias Aplicadas (INSA) Lyon – Informática (2023-2024): </strong> Matemáticas, Programación orientada a objetos, Algorítmica, Sistema operativo, Arquitectura de computadoras, Web, Desarrollo de aplicaciones</li>
+                    <li><strong>UADY - Intercambio (2024):</strong> IA, Formation AWS, Innovation technologique, Mathématiques</li>
+                    <li><strong>INSA Lyon – Nivel propedéutico (2021-2023): </strong> Matemáticas, Física, Algorítmica, Termodinámica, Mecánica, Química </li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- Études -->
+        <section>
+            <h2 onclick="toggleSection(this)">Informática</h2>
+            <div class="content">
+                <ul>
+                    <li><strong>Programación:</strong> Python, C, C++, Matlab</li>
+                    <li><strong>Desarrollo web:</strong> HTML/CSS, Javascript(Ajax), XML (Xpath, XLS) </li>
+                    <li><strong>SGBD:</strong> SQL, Oracle, MongoDB, XQuery</li>
+                    <li><strong>Sistemas de explotación:</strong> Linux/Unix, Herramientas de programación (make, gdb, gcc), Thread programming (POSIX)</li>
+                    <li><strong>Red:</strong> ISO Arquitectura, IP, Redes locales (LAN, Wifi), Concepción de Arquitectura y Configuración Management de Redes (DHPC, DNS)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Voluntario -->
+        <section>
+            <h2 onclick="toggleSection(this)">Voluntariado</h2>
+            <div class="content">
+                <ul>
+                    <li><strong>Oficina del estudiante (2022-2024):</strong> Organización de eventos para la vida del campus (mercado de Navidad, almuerzos, entre otros).</li>
+                    <li><strong>TIIL Tournament (2023-2024):</strong> Responsabilidad del patrocinio del torneo de baloncesto internacional organizado en el campus del INSA.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- idiomas -->
+        <section>
+            <h2 onclick="toggleSection(this)">Idiomas</h2>
+            <div class="content">
+                <ul>
+                    <li><strong>Francés:</strong> nativa</li>
+                    <li><strong>Inglés:</strong> B2</li>
+                    <li><strong>Español:</strong> B2</li>
+                    <li><strong>Portugués:</strong> A2</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Script pour la fonctionnalité de toggle -->
+    <script>
+        function toggleSection(header) {
+            const content = header.nextElementSibling;
+            const isVisible = content.style.display === 'block';
+            content.style.display = isVisible ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+</html>
